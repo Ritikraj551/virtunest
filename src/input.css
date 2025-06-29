@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#hero {
+  background-image: url("../images/desktop/image-hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media(max-width:576px){
+  #hero{
+    background-image: url('../images/desktop/image-hero.png');
+    background-position: center;
+  }
+}
+
+.ficon:hover {
+  filter: brightness(0) saturate(100%) invert(75%) sepia(16%) saturate(6849%)
+    hue-rotate(38deg) brightness(104%) contrast(83%);
+  cursor: pointer;
+  scale: 1.2;
+}
