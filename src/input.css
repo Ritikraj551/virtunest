@@ -8,16 +8,62 @@
   background-repeat: no-repeat;
 }
 
-@media(max-width:576px){
-  #hero{
-    background-image: url('../images/desktop/image-hero.png');
+@media (max-width: 576px) {
+  #hero {
+    background-image: url("../images/desktop/image-hero.png");
     background-position: center;
   }
 }
 
 .ficon:hover {
-  filter: brightness(0) saturate(100%) invert(75%) sepia(16%) saturate(6849%)
-    hue-rotate(38deg) brightness(104%) contrast(83%);
+  filter: brightness(0) saturate(100%) invert(90%) sepia(15%) saturate(22%)
+    hue-rotate(251deg) brightness(82%) contrast(92%);
   cursor: pointer;
   scale: 1.2;
+}
+
+/* Hamburger menu */
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 0;
+  left: 0;
+  background: #fff;
+  transform: rotate(0);
+  transform: all 0.5s;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+}
+
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
 }

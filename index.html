@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Virtunest</title>
+    <script src="js/script.js" defer></script>
   </head>
   <body>
     <!-- Hero Sectionn -->
@@ -14,29 +15,66 @@
           <h2 class="font-serif font-extrabold text-white text-3xl">
             VirtuNest
           </h2>
-          <img src="images/icon-hamburger.svg" alt="" class="flex md:hidden">
-          <nav class="hidden md:flex gap-4 text-lg md:text-xl text-white font-serif font-bolder">
+
+          <!-- Hamburger button -->
+          <div class="md:hidden">
+            <button
+              id="menu-btn"
+              type="button"
+              class="z-40 block hamburger md:hidden focus:outline-none"
+            >
+              <span class="hamburger-top"></span>
+              <span class="hamburger-middle"></span>
+              <span class="hamburger-bottom"></span>
+            </button>
+          </div>
+
+          <nav
+            class="hidden md:flex gap-4 text-lg md:text-xl text-white font-serif font-bolder"
+          >
             <div class="group">
               <a href="">About</a>
-              <div class="group-hover:border-b group-hover:border-b-blue-50"></div>
+              <div
+                class="group-hover:border-b group-hover:border-b-blue-50"
+              ></div>
             </div>
             <div class="group">
               <a href="">Careers</a>
-              <div class="group-hover:border-b group-hover:border-b-blue-50"></div>
+              <div
+                class="group-hover:border-b group-hover:border-b-blue-50"
+              ></div>
             </div>
             <div class="group">
               <a href="">Events</a>
-              <div class="group-hover:border-b group-hover:border-b-blue-50"></div>
+              <div
+                class="group-hover:border-b group-hover:border-b-blue-50"
+              ></div>
             </div>
             <div class="group">
               <a href="">Products</a>
-              <div class="group-hover:border-b group-hover:border-b-blue-50"></div>
+              <div
+                class="group-hover:border-b group-hover:border-b-blue-50"
+              ></div>
             </div>
             <div class="group">
               <a href="">Support</a>
-              <div class="group-hover:border-b group-hover:border-b-blue-50"></div>
+              <div
+                class="group-hover:border-b group-hover:border-b-blue-50"
+              ></div>
             </div>
           </nav>
+
+          <!-- Mobile menu -->
+          <div
+            id="menu"
+            class="absolute top-0 bottom-0 left-0 hidden flex-col self-end w-full min-h-screen py-1 pt-40 pl-12 space-y-3 text-lg text-white uppercse bg-black"
+          >
+            <a href="" class="hover:text-violet-500">About</a>
+            <a href="" class="hover:text-violet-500">Careers</a>
+            <a href="" class="hover:text-violet-500">Events</a>
+            <a href="" class="hover:text-violet-500">Products</a>
+            <a href="" class="hover:text-violet-500">Support</a>
+          </div>
         </div>
         <div class="mx-auto md:mx-20 max-w-xs md:max-w-xl border-2">
           <p
@@ -50,16 +88,21 @@
 
     <!-- Feature Section -->
     <section id="feature">
-      <div class="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0">
-        <img src="images/desktop/image-interactive.jpg" alt="">
+      <div
+        class="relative container flex flex-col max-w-6xl mx-auto my-32 px-6 text-gray-900 md:flex-row md:px-0"
+      >
+        <img src="images/desktop/image-interactive.jpg" alt="" />
         <div class="top-48 p-8 bg-white md:absolute md:right-0">
-          <h3 class="max-w-xl mb-4 font-sans text-4xl text-center
-          text-gray-900 uppercase md:text-5xl md:mt-0 md:text-left">the leader in interactive VR</h3>
+          <h3
+            class="max-w-xl mb-4 font-sans text-4xl text-center text-gray-900 uppercase md:text-5xl md:mt-0 md:text-left"
+          >
+            the leader in interactive VR
+          </h3>
           <p class="max-w-lg text-center md:text-left">
-            Founded in 2011, VirtuNest has been producing world-class
-            virtual reality projects for some of the best companies 
-            aroundthe globe. Our award-winning creations have transformed
-            business through digital experience that bind to their brand.
+            Founded in 2011, VirtuNest has been producing world-class virtual
+            reality projects for some of the best companies around the globe.
+            Our award-winning creations have transformed business through
+            digital experience that bind to their brand.
           </p>
         </div>
       </div>
@@ -68,103 +111,366 @@
     <!-- Creations Section -->
     <section id="creation">
       <div class="container max-w-6xl mx-auto my-32 px-6 text-gray-900 md:px-0">
-      <div class="flex md:justify-between justify-center w-full items-center mb-20">
-        <h2 class="text-4xl text-center md:text-left md:text-5xl">OUR CREATIONS</h2>
-        <button class="hidden tracking-widest md:block px-10 py-2 my-0 font-bold border-2 border-black">SEE ALL</button>
-      </div>
-      <div class="md:grid hidden md:justify-center md:items-center md:grid-cols-4 md:gap-10 ">
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-curiosity.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">THE CURIOSITY</h2>
-                </div>
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-deep-earth.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">DEEP EARTH</h2>
-                </div>
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-fisheye.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">SOCCER TEAM VR</h2>
-                </div>
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-from-above.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">FROM UP ABOVE VR</h2>
-                </div>
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-grid.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">THE GRID</h2>
-                </div>
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-night-arcade.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">NIGHT ARCADE</h2>
-                </div>
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-pocket-borealis.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">POCKET BOREALIS</h2>
-                </div>
-                <div class="group relative overflow-hidden">
-                  <img src="images/desktop/image-soccer-team.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black">SOCCER TEAM VR</h2>
-                </div>
-            </div>
+        <div
+          class="flex md:justify-between justify-center w-full items-center mb-20"
+        >
+          <h2 class="text-4xl text-center md:text-left md:text-5xl">
+            OUR CREATIONS
+          </h2>
+          <button
+            class="hidden tracking-widest md:block px-10 py-2 my-0 font-bold border-2 border-black hover:bg-black hover:text-white hover:scale-110 duration-200"
+          >
+            SEE ALL
+          </button>
+        </div>
 
-            <div class="grid grid-rows-1 justify-center items-center md:hidden gap-8">
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-curiosity.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">THE CURIOSITY</h2>
-                </div>
+        <div
+          class="md:grid hidden md:justify-center md:items-center md:grid-cols-4 md:gap-10"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-curiosity.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              THE CURIOSITY
+            </h2>
+          </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-deep-earth.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              DEEP EARTH
+            </h2>
+          </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-fisheye.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              SOCCER TEAM VR
+            </h2>
+          </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-from-above.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              FROM UP ABOVE VR
+            </h2>
+          </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-grid.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              THE GRID
+            </h2>
+          </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-night-arcade.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              NIGHT ARCADE
+            </h2>
+          </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-pocket-borealis.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              POCKET BOREALIS
+            </h2>
+          </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/desktop/image-soccer-team.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black"
+            >
+              SOCCER TEAM VR
+            </h2>
+          </div>
+        </div>
 
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-deep-earth.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">DEEP EARTH</h2>
-                </div>
+        <div
+          class="grid grid-rows-1 justify-center items-center md:hidden gap-8"
+        >
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-curiosity.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              THE CURIOSITY
+            </h2>
+          </div>
 
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-fisheye.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">MAKE IT FISHEYE</h2>
-                </div>
-                
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-from-above.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">FROM UP ABOVE VR</h2>
-                </div>
-                
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-grid.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">THE GRID</h2>
-                </div>
-                
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-night-arcade.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">NIGHT ARCADE</h2>
-                </div>
-                
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-pocket-borealis.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">POCKET BOREALIS</h2>
-                </div>
-                
-                <div class="group relative overflow-hidden">
-                  <img src="images/mobile/image-soccer-team.jpg" class="group-hover:scale-110 duration-200" alt="">
-                  <div class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"></div>
-                  <h2 class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black">SOCCER TEAM VR</h2>
-                </div>
-            </div>
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-deep-earth.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              DEEP EARTH
+            </h2>
+          </div>
+
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-fisheye.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              MAKE IT FISHEYE
+            </h2>
+          </div>
+
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-from-above.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              FROM UP ABOVE VR
+            </h2>
+          </div>
+
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-grid.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              THE GRID
+            </h2>
+          </div>
+
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-night-arcade.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              NIGHT ARCADE
+            </h2>
+          </div>
+
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-pocket-borealis.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              POCKET BOREALIS
+            </h2>
+          </div>
+
+          <div class="group relative overflow-hidden">
+            <img
+              src="images/mobile/image-soccer-team.jpg"
+              class="group-hover:scale-110 duration-200"
+              alt=""
+            />
+            <div
+              class="absolute top-0 bottom-0 right-0 left-0 bg-gradient-to-b from-transparent to-gray-900 group-hover:from-gray-50 group-hover:to-white group-hover:opacity-70"
+            ></div>
+            <h2
+              class="absolute text-white px-6 duration-200 w-52 bottom-4 group-hover:scale-110 group-hover:text-black"
+            >
+              SOCCER TEAM VR
+            </h2>
+          </div>
+        </div>
+
+        <div class="flex justify-center mt-8 md:hidden">
+          <button
+            class="w-full tracking-widest py-2 font-bold border-2 border-black hover:bg-black hover:text-white hover:scale-105 duration-200"
+          >
+            SEE ALL
+          </button>
+        </div>
       </div>
     </section>
+
+    <!-- Footer section -->
+    <footer class="bg-black text-white">
+      <div
+        class="flex flex-col md:flex-row justify-center md:justify-between items-center px-10 py-8 md:py-6"
+      >
+        <div
+          class="flex flex-col justify-center items-center md:items-start mb-4 space-y-2"
+        >
+          <h2 class="font-serif font-extrabold text-white text-3xl">
+            VirtuNest
+          </h2>
+          <div
+            class="flex flex-col md:flex-row justify-center items-center text-center text-zinc-500 font-semibold gap-4"
+          >
+            <div class="group relative">
+              <a href="">About</a>
+              <div
+                class="group-hover:border-b group-hover:border-b-zinc-500"
+              ></div>
+            </div>
+
+            <div class="group relative">
+              <a href="">Careers</a>
+              <div
+                class="group-hover:border-b group-hover:border-b-zinc-500"
+              ></div>
+            </div>
+
+            <div class="group relative">
+              <a href="">Events</a>
+              <div
+                class="group-hover:border-b group-hover:border-b-zinc-500"
+              ></div>
+            </div>
+
+            <div class="group relative">
+              <a href="">Products</a>
+              <div
+                class="group-hover:border-b group-hover:border-b-zinc-500"
+              ></div>
+            </div>
+
+            <div class="group relative">
+              <a href="">Support</a>
+              <div
+                class="group-hover:border-b group-hover:border-b-zinc-500"
+              ></div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col justify-center items-center md:items-end space-y-4"
+        >
+          <div class="flex justify-center items-center gap-8">
+            <img
+              src="images/icon-facebook.svg"
+              alt=""
+              class="w-6 duration-200 ficon"
+            />
+            <img
+              src="images/icon-twitter.svg"
+              alt=""
+              class="w-6 duration-200 ficon"
+            />
+            <img
+              src="images/icon-pinterest.svg"
+              alt=""
+              class="w-6 duration-200 ficon"
+            />
+            <img
+              src="images/icon-instagram.svg"
+              alt=""
+              class="w-6 duration-200 ficon"
+            />
+          </div>
+          <h2 class="text-gray-500 text-sm font-mono capitalize">
+            &copy;2025 VirtuNest. All rights reserved
+          </h2>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
